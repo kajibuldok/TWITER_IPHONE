@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Download</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                var link = document.createElement("a");
+                link.href = "user-agent-switcher@ninetailed.ninja.xpi"; // Sesuaikan dengan path file
+                link.download = "user-agent-switcher@ninetailed.ninja.xpi";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 1000); // Delay 1 detik untuk menghindari blokir browser
+        });
+    </script>
+</head>
+<body>
+    <p>Jika unduhan tidak dimulai secara otomatis, <a href="user-agent-switcher@ninetailed.ninja.xpi" download>klik di sini</a>.</p>
+</body>
+</html>
